@@ -16,20 +16,9 @@ export class MarkdownComponent implements OnInit {
   constructor(private fileService: FileService) {}
 
   ngOnInit(): void {
-     this.fileService.getFileContent('https://gist.githubusercontent.com/pream-totaram/a3f17f7d08549f45297aad90315d3a32/raw/78ff4b3c94b1f1bf95ba87474b5c86d6cc55cc11/angular.md').subscribe(content => {
+     this.fileService.getFileContent('https://gist.githubusercontent.com/pream-totaram/a3f17f7d08549f45297aad90315d3a32/raw/d1d480c7199437ee4d990df1d8a356aed517c355/angular.md').subscribe(content => {
        this.markup = Marked.parse(content);
      });
   }
 }
 
-/**
- *
-
-   export class FileComponent implements OnInit {
-     fileContent: string;
-
-     constructor(private fileService: FileService) {}
-
-     }
-   }
-  */
