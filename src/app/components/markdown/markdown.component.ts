@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Marked } from '@ts-stack/markdown';
 import { SanitizedHtmlPipe } from '../../sanitized-html.pipe';
-import { FileService } from '../../file.service';
+import { FileService } from '../../services/file/file.service';
 
 @Component({
   selector: 'app-markdown',
@@ -21,4 +21,3 @@ export class MarkdownComponent implements OnInit {
      });
   }
 }
-
