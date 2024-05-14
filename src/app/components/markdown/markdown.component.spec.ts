@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MarkdownComponent } from './markdown.component';
+import {HttpClient, HttpHandler} from "@angular/common/http";
 
 describe('MarkdownComponent', () => {
   let component: MarkdownComponent;
@@ -8,10 +9,11 @@ describe('MarkdownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MarkdownComponent]
+      imports: [MarkdownComponent],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(MarkdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
